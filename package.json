@@ -1,0 +1,12 @@
+{
+  "name": "merng-galleryapp-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Juminhark/merng-galleryapp-server.git",
+  "author": "Ju minhark <wnalsgkr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.22.1",
+    "graphql": "^15.5.0"
+  }
+}
