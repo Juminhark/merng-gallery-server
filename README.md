@@ -119,4 +119,36 @@ server.listen().then(({ url }) => {
 
 ```
 
-mongodb+srv://admin:<password>@cluster0.nvtnd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+## mongoDB connect
+
+- mongoose
+
+```sh
+> yarn add mongoose
+```
+
+- 1. master user id/password
+- 2. connect > connect your application > connect code
+
+```js
+// config.js
+module.exports = {
+	MONGODB: 'mongodb connect code',
+};
+```
+
+```js
+// index.js
+const mongoose = require('mongoose');
+const { MONGODB } = require('./config');
+
+mongoose
+	.connect(MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
+	.then(() => {
+		console.log('MongoDB connected!');
+		return server.listen({ port: 5000 });
+	})
+	.then((res) => {
+		console.log(`🚀  Server ready at ${res.url}`);
+	});
+```
