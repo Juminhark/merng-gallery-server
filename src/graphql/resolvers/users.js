@@ -33,7 +33,7 @@ const generateToken = (user) => {
 const oauth2Client = new google.auth.OAuth2(
 	process.env.GOOGLE_CLIENT_ID,
 	process.env.GOOGLE_CLIENT_SECRET,
-	'http://localhost:3000/google/callback'
+	'http://localhost:4000/google/callback'
 );
 
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
 				scope: scopes,
 			});
 
-			const githubUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=user&redirect_uri=http%3A//localhost:3000/github/callback`;
+			const githubUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=user&redirect_uri=http%3A//localhost:4000/github/callback`;
 
 			return [googleUrl, githubUrl];
 		},
