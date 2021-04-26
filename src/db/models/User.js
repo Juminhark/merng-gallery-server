@@ -4,6 +4,7 @@ const userSchema = new Schema({
 	username: String,
 	email: { type: String, required: true, index: true, unique: true },
 	password: String,
+	createdAt: String,
 	picture_url: String,
 	social: {
 		github: String,

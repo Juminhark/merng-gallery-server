@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-const typeDefs = gql`
+module.exports = gql`
 	type User {
 		id: ID!
 		email: String!
@@ -28,7 +28,7 @@ const typeDefs = gql`
 	}
 
 	type Query {
-		allUser: [User]
+		allUsers: [User]
 		getProjects: [Project]
 		getProject(projectId: ID!): Project
 		oauthLoginUrl: [String]
@@ -41,6 +41,7 @@ const typeDefs = gql`
 		authorizeWithGoogle(code: String!): User!
 		createProject(title: String!, content: String): Project!
 		deleteProject(projectId: ID!): String
+		likeProject(projectId: ID!): Project!
 	}
 
 	type Subscription {
@@ -48,4 +49,6 @@ const typeDefs = gql`
 	}
 `;
 
-export default typeDefs;
+// user: User!
+
+// authorizeWithGoogle(code: String): AuthPayload

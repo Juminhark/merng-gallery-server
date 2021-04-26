@@ -1,16 +1,25 @@
 {
 	"name": "merng-galleryapp-server",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "src/index.js",
 	"repository": "https://github.com/Juminhark/merng-galleryapp-server.git",
 	"author": "Ju minhark <wnalsgkr@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"apollo-server": "^2.22.1",
+		"apollo-server": "^2.23.0",
+		"bcryptjs": "^2.4.3",
+		"cross-fetch": "^3.1.4",
+		"dotenv": "^8.2.0",
+		"fetch": "^1.1.0",
+		"googleapis": "^72.0.0",
 		"graphql": "^15.5.0",
-		"mongoose": "^5.12.2"
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.5"
 	},
 	"scripts": {
-		"start": "node index.js"
+		"start": "nodemon src/index.js"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
 	}
 }
